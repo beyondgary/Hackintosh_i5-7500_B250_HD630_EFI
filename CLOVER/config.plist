@@ -91,6 +91,12 @@
 			<dict>
 				<key>#Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>AddDTGP</key>
+				<false/>
+				<key>FixShutdown</key>
+				<false/>
+				<key>FixUSB</key>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -178,7 +184,37 @@
 					RUNfXw==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC1 to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC2 to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMg==
+					</data>
+				</dict>
 			</array>
+			<key>SlpSmiAtWake</key>
+			<false/>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -204,18 +240,18 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -lilubetaall -v darkwake=8</string>
+		<string>dart=0 -lilubetaall -v</string>
 		<key>CustomLogo</key>
 		<string>Apple</string>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>Windows10</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -245,62 +281,168 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-            <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-            <dict>
-                <key>AAPL,ig-platform-id</key>
-                <data>
-                AAASWQ==
-                </data>
-                <key>device-id</key>
-                <data>
-                ElkAAA==
-                </data>
-                <key>enable-hdmi20</key>
-                <data>
-                AQAAAA==
-                </data>
-                <key>framebuffer-con0-enable</key>
-                <data>
-                AQAAAA==
-                </data>
-                <key>framebuffer-con0-type</key>
-                <data>
-                AAgAAA==
-                </data>
-                <key>framebuffer-con1-enable</key>
-                <data>
-                AQAAAA==
-                </data>
-                <key>framebuffer-con1-type</key>
-                <data>
-                AAgAAA==
-                </data>
-                <key>framebuffer-con2-enable</key>
-                <data>
-                AQAAAA==
-                </data>
-                <key>framebuffer-con2-type</key>
-                <data>
-                AAgAAA==
-                </data>
-                <key>framebuffer-fbmem</key>
-                <data>
-                AACQAA==
-                </data>
-                <key>framebuffer-patch-enable</key>
-                <data>
-                AQAAAA==
-                </data>
-                <key>framebuffer-stolenmem</key>
-                <data>
-                AAAwAQ==
-                </data>
-                <key>framebuffer-unifiedmem</key>
-                <data>
-                AAAAgA==
-                </data>
-            </dict>
-        </dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAASWQ==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
+				<key>device-id</key>
+				<data>
+				ElkAAA==
+				</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-hdmi20</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-camellia</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-con0-busid</key>
+				<data>
+				BQAAAA==
+				</data>
+				<key>framebuffer-con0-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-flags</key>
+				<data>
+				hwEAAA==
+				</data>
+				<key>framebuffer-con0-index</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
+				<key>framebuffer-con0-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con1-busid</key>
+				<data>
+				BAAAAA==
+				</data>
+				<key>framebuffer-con1-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con1-flags</key>
+				<data>
+				hwEAAA==
+				</data>
+				<key>framebuffer-con1-index</key>
+				<data>
+				AgAAAA==
+				</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
+				<key>framebuffer-con1-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con2-busid</key>
+				<data>
+				BgAAAA==
+				</data>
+				<key>framebuffer-con2-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-flags</key>
+				<data>
+				hwEAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
+				<key>framebuffer-con2-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con3-busid</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-con3-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con3-flags</key>
+				<data>
+				IAAAAA==
+				</data>
+				<key>framebuffer-con3-index</key>
+				<data>
+				/////w==
+				</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-con3-type</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-flags</key>
+				<data>
+				CxEAAA==
+				</data>
+				<key>framebuffer-memorycount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-mobile</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-pipecount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-portcount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
+				<key>model</key>
+				<string>Intel HD Graphics 630</string>
+			</dict>
+		</dict>
 		<key>SetIntelMaxBacklight</key>
 		<false/>
 		<key>USB</key>
@@ -319,32 +461,14 @@
 	<dict>
 		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
-		<key>Custom</key>
-		<dict>
-			<key>Entries</key>
-			<array>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>FullTitle</key>
-					<string>UEFI internal</string>
-					<key>Hidden</key>
-					<string>Always</string>
-					<key>Ignore</key>
-					<false/>
-					<key>NoCaches</key>
-					<false/>
-					<key>Type</key>
-					<string>Other</string>
-				</dict>
-			</array>
-		</dict>
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
 			<string>Recovery</string>
 			<string>Windows</string>
 		</array>
+		<key>Language</key>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
@@ -361,8 +485,10 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>Catalina</string>
+		<string>SimpleThemeDark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -882,6 +1008,10 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>ROM</key>
+		<data>
+		e5sW0j4G
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -938,6 +1068,8 @@
 	<dict>
 		<key>#BacklightLevel</key>
 		<integer>0</integer>
+		<key>CustomUUID</key>
+		<string>3306BAF0-48AF-5F23-8069-25E2DE83946E</string>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 		<key>InjectSystemID</key>
