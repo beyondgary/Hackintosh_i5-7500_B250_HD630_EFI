@@ -15,7 +15,7 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * HD630 核显使用 WhateverGreen_v1.3.1.kext 正常
 * 声卡使用 VoodooHDA-2.8.9.kext 正常
 * 网卡使用 AppleIntelE1000e.kext 正常
-* USB 使用 USBInjectAll_v0.7.1.kext、GenericUSBXHCI.kext 正常
+* USB 使用定制端口 USBPorts.kext 正常
 * 休眠正常
 
 问题
