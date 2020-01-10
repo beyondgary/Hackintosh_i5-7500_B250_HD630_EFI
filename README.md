@@ -10,17 +10,26 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * 使用 Clover 引导
 * 使用机型 iMac18,1
 
+![info](img/info.png)
+
 驱动情况
 ----
 * HD630 核显使用 WhateverGreen_v1.3.1.kext 正常
-* 声卡使用 AppleALC.kext 正常
+* 声卡使用 AppleALC.kext 输出、输入正常
 * 网卡使用 AppleIntelE1000e.kext 正常
 * USB 使用定制端口 USBPorts.kext 正常
 * 休眠正常
+* 使用 DIV 接口正常
+
+![显卡](img/显卡.png)
+
+![电源](img/电源.png)
+
+![声音](img/声音.png)
 
 问题
 ----
-* 睡眠断电后，唤醒自动重启。
-* 麦克风不工作
-* 使用 DIV 接口，DP、HDMI 待测试，4k 支持待测试
-  
+* 深度睡眠断电后，唤醒自动重启。并且日志中有错误提示，HELP。
+* DP、HDMI 待测试，4k 支持待测试。
+
+![问题-无电源日志](img/问题-无电源日志.png)
