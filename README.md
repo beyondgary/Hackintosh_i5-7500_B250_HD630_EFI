@@ -29,4 +29,4 @@ Hackintosh_i5-7500_B250_HD630_EFI
 
 问题
 ----
-* DP、HDMI、4k 待测试。
+* DP、HDMI 待测试，4k 支持待测试。
