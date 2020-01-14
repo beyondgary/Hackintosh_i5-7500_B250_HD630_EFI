@@ -6,7 +6,7 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * 主板：GIGABYTE B250M-D3H
 * CPU：Intel i5 7500
 * 显卡：Intel HD Graphics 630
-* 使用安装镜像 10.14.6 (18G1012)
+* 使用安装镜像 10.15.2 (18G1012)
 * 使用 Clover 引导
 * 使用机型 iMac18,1
 
@@ -29,4 +29,4 @@ Hackintosh_i5-7500_B250_HD630_EFI
 
 问题
 ----
-* DP、HDMI 待测试，4k 支持待测试。
+* DP、HDMI、4k 待测试。
