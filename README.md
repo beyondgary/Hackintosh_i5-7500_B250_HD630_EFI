@@ -7,15 +7,15 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * CPU：Intel i5 7500
 * 显卡：Intel HD Graphics 630
 * 使用安装镜像 10.15.2 (18G1012)
-* 使用 Clover 引导
-* 使用机型 iMac18,1
+* 使用 Clover v5033 引导
+* 使用机型 iMac18,1、MacMini2018,1
 
-![info](img/info.png)
+![info](img/10.15.png)
 
 驱动情况
 ----
 * HD630 核显使用 WhateverGreen_v1.3.1.kext 正常
-* 声卡使用 AppleALC.kext 输出、输入正常
+* 声卡使用 AppleALC.kext 输出、输入正常，注入 ID = 3 (其他尝试可用：13)
 * 网卡使用 AppleIntelE1000e.kext 正常
 * USB 使用定制端口 USBPorts.kext 正常
 * 休眠正常
