@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -10,6 +10,8 @@
 	<dict>
 		<key>Background</key>
 		<dict>
+			<key>Dark</key>
+			<false/>
 			<key>Path</key>
 			<string>background.png</string>
 			<key>Type</key>
@@ -17,34 +19,64 @@
 		</dict>
 		<key>Badges</key>
 		<dict>
+			<key>Inline</key>
+			<false/>
 			<key>Show</key>
 			<true/>
 			<key>Swap</key>
 			<true/>
-			<key>Inline</key>
-			<false/>
 		</dict>
 		<key>Banner</key>
 		<string>banner.png</string>
+		<key>BootCampStyle</key>
+		<false/>
+		<key>Components</key>
+		<dict>
+			<key>Banner</key>
+			<true/>
+			<key>Functions</key>
+			<true/>
+			<key>Help</key>
+			<true/>
+			<key>Label</key>
+			<true/>
+			<key>MenuTitle</key>
+			<true/>
+			<key>MenuTitleImage</key>
+			<true/>
+			<key>Revision</key>
+			<true/>
+		</dict>
 		<key>Font</key>
 		<dict>
-			<key>Path</key>
-			<string>font.png</string>
-			<key>Type</key>
-			<string>Load</string>
 			<key>CharWidth</key>
 			<integer>10</integer>
+			<key>Path</key>
+			<string>font.png</string>
+			<key>Proportional</key>
+			<false/>
+			<key>Type</key>
+			<string>Load</string>
+		</dict>
+		<key>Origination</key>
+		<dict>
+			<key>DesignHeight</key>
+			<integer>1080</integer>
+			<key>DesignWidth</key>
+			<integer>1920</integer>
 		</dict>
 		<key>Selection</key>
 		<dict>
 			<key>Big</key>
 			<string>selection_big.png</string>
+			<key>ChangeNonSelectedGrey</key>
+			<false/>
 			<key>Color</key>
 			<string>0x6C6C6CFF</string>
-			<key>Small</key>
-			<string>selection_small.png</string>
 			<key>OnTop</key>
 			<true/>
+			<key>Small</key>
+			<string>selection_small.png</string>
 		</dict>
 	</dict>
 	<key>Year</key>
