@@ -304,7 +304,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>SimpleThemeDark</string>
+		<string>Aero</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -586,9 +586,9 @@
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>MLB</key>
-		<string>C02ZLXZVH7JY</string>
+		<string>C02DMGYCH7JY</string>
 		<key>ROM</key>
-		<data>bzLWNeHl</data>
+		<data>cyT7Jm9s</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -603,7 +603,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02943403GUH69F8C</string>
+		<string>C02044102GUH69FUE</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -633,16 +633,16 @@
 		<key>ProductName</key>
 		<string>iMac18,1</string>
 		<key>SerialNumber</key>
-		<string>C02ZLXZVH7JY</string>
+		<string>C02DMGYCH7JY</string>
 		<key>SmUUID</key>
-		<string>7FAB4440-5160-4A97-B0F2-A5123035E1E5</string>
+		<string>620298B7-7673-44AB-9433-BD1A48266F6C</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>2ACFEA5E-0A66-4768-B9ED-27F30A908F1E</string>
+		<string>E71FFCE1-FC3E-4CC4-B61A-DDB8827FBDDA</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
