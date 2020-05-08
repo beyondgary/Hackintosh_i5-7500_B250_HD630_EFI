@@ -30,4 +30,3 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * 无法睡眠，临时解决方法：`sudo pmset -a disablesleep 1 ` 防止进入睡眠模式
 * DP 无法开启 4k ，只有 1920*1080 。
 * HDMI 待测试。
-* clover v5116 引导界面主题图标显示错位，但不影响使用。
