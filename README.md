@@ -17,7 +17,7 @@ Hackintosh_i5-7500_B250_HD630_EFI
 
 驱动情况
 ----
-* HD630 核显使用 WhateverGreen-1.3.8_t3.kext 正常，针对核心显卡修改后版本
+* HD630 核显使用 WhateverGreen-1.3.8_t3.kext 正常
 * 声卡使用 AppleALC-1.3.9.kext 输出、输入正常，注入 ID = 20 (其他尝试可用：3，13)
 * 网卡使用 AppleIntelE1000e.kext 正常
 * USB 使用 USBInjectAll_v0.7.4.kext 正常识别 USB3.0,USB2.0
