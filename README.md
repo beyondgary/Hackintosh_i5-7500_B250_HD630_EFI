@@ -1,6 +1,6 @@
 Hackintosh_i5-7500_B250_HD630_EFI
 ====
-针对能正常使用于 10.15.4，只对核心显卡，网卡，声卡，以及 USB 做了相应的驱动设置。可能不适应其他 macOS 版本。在介绍后面已知的问题，如有解决的朋友请告知，多谢。
+针对能正常使用于 10.15.4，只对核心显卡，网卡，声卡，以及 USB 做了相应的驱动设置。核心显卡，只选择机型，让 WhateverGreen 自动完成驱动。声卡使用 AppleALC 指定 ID = 97。可能不适应其他 macOS 版本。在介绍后面已知的问题，如有解决的朋友请告知，多谢。
 
 ![系统信息](./Screenshot/System.png)
 ![音频](./Screenshot/ALC892.png)
@@ -18,7 +18,7 @@ Hackintosh_i5-7500_B250_HD630_EFI
 驱动情况
 ----
 * HD630 核显使用 WhateverGreen-1.3.8_t3.kext 正常
-* 声卡使用 AppleALC-1.3.9.kext 输出、输入正常，注入 ID = 20 (其他尝试可用：3，13)
+* 声卡使用 AppleALC-1.3.9.kext 输出、输入正常，注入 ID = 97 (其他尝试可用：3，13)
 * 网卡使用 AppleIntelE1000e.kext 正常
 * USB 使用 USBInjectAll_v0.7.4.kext 正常识别 USB3.0,USB2.0
 * 休眠正常
@@ -30,3 +30,17 @@ Hackintosh_i5-7500_B250_HD630_EFI
 * 无法睡眠，临时解决方法：`sudo pmset -a disablesleep 1 ` 防止进入睡眠模式
 * DP 无法开启 4k ，只有 1920*1080 。
 * HDMI 待测试。
+
+
+
+Clover Configurator
+----
+![ACPI](./Screenshot/CloverConfigurator/1.png)
+![引导参数](./Screenshot/CloverConfigurator/2.png)
+![设备设置](./Screenshot/CloverConfigurator/3.png)
+![禁用驱动](./Screenshot/CloverConfigurator/4.png)
+![引导界面](./Screenshot/CloverConfigurator/5.png)
+![显卡设置](./Screenshot/CloverConfigurator/6.png)
+![内核和驱动补丁](./Screenshot/CloverConfigurator/7.png)
+![机型参数](./Screenshot/CloverConfigurator/8.png)
+![系统参数](./Screenshot/CloverConfigurator/9.png)
