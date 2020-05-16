@@ -117,4 +117,5 @@ Tips:这里在 Clover 引导界面隐藏了 `Recovery`、`Windows`启动盘符�
 ![机型参数](./Screenshot/CloverConfigurator/8.png)
 ![系统参数](./Screenshot/CloverConfigurator/9.png)
 
-[返回顶部](#hackintosh_i5-7500_b250_hd630_efi)
+
+[返回顶部](#)
