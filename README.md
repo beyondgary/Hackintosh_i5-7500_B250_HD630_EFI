@@ -45,15 +45,18 @@
 ## 已知问题
 
 * 无法睡眠，临时解决方法使用以下命令防止进入睡眠模式：
-  `sudo pmset -a disablesleep 1 ` 
+  ``` bash
+  sudo pmset -a disablesleep 1
+  ```
 
 
 
 ## 解决双系统时间不同步
 
 在安装了 windows 与 macOS 两个系统时，windows 的时间会慢 8 个小时，使用以下命令让 Windows 把硬件时间当作 UTC 时间。使用管理员启动命令行：
-`Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
-
+``` bash
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+```
 
 
 ## 注入三码使正常使用 Apple 服务
@@ -80,10 +83,14 @@
 
 ## 开启 HiDPI
 - 开启 HiDPI
-`sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true`
+``` bash
+sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
+```
 需要重启电脑生效。
 - 关闭 HiDPI
-`sudo defaults delete /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled`
+``` bash
+sudo defaults delete /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled
+```
 需要重启电脑生效。
 - 安装 RDM 工具，方便设置分辨率，分辨率后带闪电标志的，表示支持 HiDPI 显示 
 http://avi.alkalay.net/software/RDM/
@@ -92,7 +99,9 @@ http://avi.alkalay.net/software/RDM/
 
 ## 第三方 SSD 固态硬盘开启 TRIM
 开启TRIM能让 SSD 在长期使用中有更长的使用寿命及更快的速度。使用终端命令：
-`sudo trimforce enable`
+``` bash
+sudo trimforce enable
+```
 ![开启 TRIM](./Screenshot/TRIM.png)
 
 
