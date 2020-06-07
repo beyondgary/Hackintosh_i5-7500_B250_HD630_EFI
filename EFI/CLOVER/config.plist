@@ -195,10 +195,12 @@
 		<string>-v dart=0 -lilubetaall</string>
 		<key>NeverHibernate</key>
 		<true/>
+		<key>NoEarlyProgress</key>
+		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>-1</integer>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.12.6+ with native KabyLake support</string>
@@ -586,9 +588,9 @@
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>MLB</key>
-		<string>C02DMGYCH7JY</string>
+		<string>C02ZN5YUH7JY</string>
 		<key>ROM</key>
-		<data>cyT7Jm9s</data>
+		<data>Lsdxbr8z</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -603,7 +605,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02044102GUH69FUE</string>
+		<string>C02ZN5YUH7JY</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -633,16 +635,16 @@
 		<key>ProductName</key>
 		<string>iMac18,1</string>
 		<key>SerialNumber</key>
-		<string>C02DMGYCH7JY</string>
+		<string>C02ZN5YUH7JY</string>
 		<key>SmUUID</key>
-		<string>620298B7-7673-44AB-9433-BD1A48266F6C</string>
+		<string>E172F212-FB89-4EDF-987A-0964136EBF33</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>E71FFCE1-FC3E-4CC4-B61A-DDB8827FBDDA</string>
+		<string>5DE9C466-5DA8-5186-8009-BA2EF2EEDE0E</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>

@@ -1,5 +1,5 @@
 # Hackintosh_i5-7500_B250_HD630_EFI
-针对能正常使用于 `Catelina 10.15.4`，只对核心显卡，网卡，声卡，以及 USB 做了相应的驱动设置。核心显卡，只选择机型，让 `WhateverGreen` 自动完成驱动。声卡使用 `AppleALC` 指定 `ID = 97`。可能不适应其他 macOS 版本。在介绍中的已知问题，如有解决的朋友请告知，多谢。
+针对能正常使用于 `macOS Catalina 10.15.5`，只对核心显卡，网卡，声卡，以及 USB 做了相应的驱动设置。核心显卡，只选择机型，让 `WhateverGreen` 自动完成驱动。声卡使用 `AppleALC` 指定 `ID = 97`。可能不适应其他 macOS 版本。在介绍中的已知问题，如有解决的朋友请告知，多谢。
 
 ![系统信息](./Screenshot/System.png)
 ![音频](./Screenshot/ALC892.png)
@@ -24,7 +24,8 @@
 - CPU：`Intel i5 7500`
 - 显卡：`Intel HD Graphics 630`
 - 声卡：`ALC892`
-- 镜像： `macOS Catelina 10.15.4 (19E287)`
+- 网卡：`i219-v`
+- 系统： `macOS Catelina 10.15.5(19F101)`
 - Clover：`v5116` 
 - 机型： `iMac18,1`、`MacMini2018,1`
 
@@ -34,7 +35,7 @@
 
 - HD630 核显使用 `WhateverGreen-1.3.8_t3.kext` 正常
 - 声卡使用 `AppleALC-1.3.9.kext` 输出、输入正常，注入 `ID = 97` (其他尝试可用：3，13，99)
-- 网卡使用 `AppleIntelE1000e.kext` 正常
+- 网卡使用 `IntelMausiEthernet.kext` 正常
 - `USB` 使用 `USBInjectAll_v0.7.4.kext` 正常识别 `USB3.0`,`USB2.0`
 - 休眠正常
 - 使用 `DIV` 接口正常，`HDMI`、`DP` 待测试
@@ -48,6 +49,7 @@
   ``` bash
   sudo pmset -a disablesleep 1
   ```
+  当此值设为 1 时，将停用所有睡眠功能。Apple 菜单中的“睡眠”项目还会变暗（“呈灰显状态”）。设为 0 时，可恢复停用的睡眠功能。
 
 
 
@@ -59,25 +61,21 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ```
 
 
+
 ## 注入三码使正常使用 Apple 服务
 
 在正确注入有效三码后，可以正常使用 `iMessage`、`FaceTime`、`Siri` 和 `App Store` 。使用 `iMessageDebug` 工具可读取本机三码。
 
-1. 这里将 `iMessageDebug` 工具放到桌面
-2. 终端命令给 `iMessageDebug` 执行权限 `sudo chmod a+x /Users/admin/Desktop/iMessageDebug`
-3. 双击 `iMessageDebug` 执行，将在终端打印出三码内容，按 y 还可以将三码内容保存到桌面文件中
-4. 使用 `Clover Configurator` 编辑 `config.plist` 文件
-5. 在三码内容中找到 `ROM` 填写到 `Rt Variables` -> `ROM`
-6. 在三码内容中找到 `BoardSerialNumber` 填写到 `Rt Variables`(变量设置) -> `MLB`
-7. 在三码内容中找到 `SerialNumber` 填写到 `SMBIOS`(机型设置) -> `Serial Number`
-8. 在三码内容中找到 `BoardSerialNumber` 填写到 `SMBIOS`(机型设置) -> `Board Serial Number`
-9. 在三码内容中找到 `Hardware UUID` 填写到 `SMBIOS`(机型设置) -> `SmUUID`
-10. 在三码内容中找到 `System-ID` 填写到 `System Parameters`(系统参数) -> `Custom UUID`
-11. 最后勾选 `Inject System ID`
+这里将 `iMessageDebug` 工具放到桌面，终端命令给 `iMessageDebug` 执行权限 `sudo chmod a+x /Users/admin/Desktop/iMessageDebug`。双击 `iMessageDebug` 执行，将在终端打印出三码内容，按 y 还可以将三码内容保存到桌面文件中，使用 `Clover Configurator` 编辑 `config.plist` 文件：
 
-![变量设置](./Screenshot/System-ID/RtVariables.png)
-![机型设置](./Screenshot/System-ID/SMBIOS.png)
-![系统参数](./Screenshot/System-ID/SystemParameters.png)
+- `ROM` : `Rt Variables` -> `ROM`
+- `BoardSerialNumber` : `Rt Variables`(变量设置) -> `MLB`
+- `SerialNumber` : `SMBIOS`(机型设置) -> `Serial Number`
+- `BoardSerialNumber` : `SMBIOS`(机型设置) -> `Board Serial Number`
+- `Hardware UUID` : `SMBIOS`(机型设置) -> `SmUUID`
+- `System-ID` : `System Parameters`(系统参数) -> `Custom UUID`
+- 最后勾选 `Inject System ID`
+
 
 
 
