@@ -14,9 +14,8 @@
 - [硬件&系统](#硬件系统)
 - [驱动情况](#驱动情况)
 - [已知问题](#已知问题)
-- [BIOS 设置](#BIOS 设置)
-- [OpenCore 文件说明](#OpenCore 文件说明)
-- [config.plist 配置](#config.plist 配置)
+- [BIOS 设置](#BIOS-设置)
+- [OpenCore 文件说明](#OpenCore-文件说明)
 - [解决双系统时间不同步](#解决双系统时间不同步)
 - [注入三码使正常使用 Apple 服务](#注入三码使正常使用-apple-服务)
 - [开启 HiDPI](#开启-hidpi)
@@ -268,4 +267,4 @@ sudo trimforce enable
 ```
 ![开启 TRIM](./Screenshot/TRIM.png)
 
-[返回顶部](#hackintosh_i5-7500_b250_hd630_efi)
+[返回顶部](#Hackintosh_i5-7500_B250_RX570_EFI)
