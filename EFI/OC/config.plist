@@ -168,27 +168,12 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,3</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>layout-id</key>
-				<data>YQAAAA==</data>
-				<key>model</key>
-				<string>200 Series PCH HD Audio</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAASWQ==</data>
 				<key>device-id</key>
 				<data>ElkAAA==</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 630</string>
 			</dict>
@@ -360,7 +345,7 @@
 			<key>AppleXcpmForceBoost</key>
 			<false/>
 			<key>CustomSMBIOSGuid</key>
-			<true/>
+			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableLinkeditJettison</key>
@@ -384,7 +369,7 @@
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ThirdPartyDrives</key>
-			<false/>
+			<true/>
 			<key>XhciPortLimit</key>
 			<true/>
 		</dict>
@@ -516,7 +501,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v darkwake=0 alcid=97</string>
+				<string>-v alcid=97</string>
 				<key>csr-active-config</key>
 				<data>/w8AAA==</data>
 				<key>prev-lang:kbd</key>
@@ -585,7 +570,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02710101CDH69F1F</string>
+			<string>C02736300GUH69FA8</string>
 			<key>ProcessorType</key>
 			<integer>1543</integer>
 			<key>SystemMemoryStatus</key>
@@ -595,11 +580,11 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMac18,1</string>
+			<string>iMac18,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02TD09VH7JY</string>
+			<string>C02TQ3YRH7JY</string>
 			<key>SystemUUID</key>
-			<string>6DB1C213-A35A-4F75-A5E2-F6D90F1C491B</string>
+			<string>5DE9C466-5DA8-5186-8009-BA2EF2EEDE0E</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
