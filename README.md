@@ -42,12 +42,12 @@
 
 ## 驱动情况
 
-- HD630 核显使用 `WhateverGreen.kext` 驱动，可用于视频解码硬件加速。
+- `HD630` 核显使用 `WhateverGreen.kext` 驱动，可用于视频解码硬件加速。
 - 声卡使用 `AppleALC.kext` 输出、输入正常，注入 `alcid = 97` (其他尝试可用：3，13，99)
 - 网卡使用 `IntelMausi.kext` 正常
 - `USB` 使用 `USBInjectAll.kext` 正常识别 `USB3.0`,`USB2.0`
 - 休眠正常
-- RX570 独立显卡 macOS 免驱。使用独立显卡接口，以测试两个 DP 接口正常。
+- `RX570` 独立显卡 `macOS` 免驱。使用独立显卡接口，以测试两个 `DP` 接口正常。
 
 
 
@@ -64,20 +64,55 @@
 
 ## BIOS 设置
 
+###  `Gigabyte B250M-D3H` 主板
+
+加粗项为必须设置的。
+
+- `M.I.T`
+- `Miscellaneous Settings` 
+  - **`CFG Lock` = `Disabled`**
+- `BIOS`
+  - **`Fast Boot` = `Disabled`**
+  - `Windows 8/10 Features` = `Windows 8/10`
+  - **`CSM Support` = `Disabled`**
+- `Peripherals`
+  - `Initial Display Output` = `IGFX`
+
+  - **`SW Guard Extensions (SGX)` = `Disabled`**
+  - `Super IO Configuration`
+    - `Serial Port` = `Disabled`
+    - `Parallel Port` = `Disabled`
+  - `USB Configuration`
+    - **`Legacy USB Support` = `Enabled`**
+    - **`XHCI Hand-off` = `Enabled`**
+  - `SATA And RST Configuration`
+    - **`SATA Mode Selection` = `AHCI`**
+- `Chipset`
+  - **`VT-d`  = `Disabled`**
+  - `Internal Graphics` = `Enabled`
+  - `DVMT Pre-Allocated` = `64M`
+  - `DVMT Total Gfx Mem` = `256M`
+
+
+
+### 通用 BIOS 设置
+
 - 禁用：
-  - Fast Boot (快速启动)
-  - CFG Lock (CFG 锁)
-  - VT-d
-  - CSM
-  - Intel SGX
+
+  - `Fast Boot` (快速启动)
+  - `CFG Lock` (CFG 锁)
+  - `VT-d`
+  - `CSM`
+  - `Intel SGX`
+
 - 启用：
-  - VT-x 
-  - Above 4G decoding (大于 4G 地址空间解码)
-  - Hyper Threading (超线程)
-  - Execute Disable Bit (执行禁止位)
-  - EHCI/XHCI Hand-off (接手 EHCI/XHCI 控制)
-  - OS type : Windows 8.1/10 (操作系统类型：Windows 8.1/10)
-  - Legacy RTC Device (传统 RTC 设备)
+  - `VT-x`
+  - `Above 4G decoding` (大于 4G 地址空间解码)
+  - `Hyper Threading` (超线程)
+  - `Execute Disable Bit` (执行禁止位)
+  - `EHCI/XHCI Hand-off` (接手 EHCI/XHCI 控制)
+  - `OS type : Windows 8.1/10` (操作系统类型：Windows 8.1/10)
+  - `Legacy RTC Device` (传统 RTC 设备)
 
 
 
@@ -86,8 +121,8 @@
 
 #### /
 
-- config.plist - 必须， OpenCore 配置文件。
-- OpenCore.efi - 必须，OpenCore 启动引导文件。
+- `config.plist` - 必须， OpenCore 配置文件。
+- `OpenCore.efi` - 必须，OpenCore 启动引导文件。
 
 
 
@@ -95,25 +130,25 @@
 
 补丁文件，如果硬件配置并不一样，很可能需要修改以下文件：
 
-- SSDT-EC.aml 必须，因为当前 DSDT 中为 H_EC 。
-- SSDT-PLUG.aml 必须，注入 X86，实现 CPU 电源管理。
-- SSDT-SMBS.aml 可选，注入 SBUS 设备，USB 电源相关。
+- `SSDT-EC.aml` 必须，因为当前 DSDT 中为 H_EC 。
+- `SSDT-PLUG.aml` 必须，注入 X86，实现 CPU 电源管理。
+- `SSDT-SMBS.aml` 可选，注入 SBUS 设备，USB 电源相关。
 
 
 
 #### Bootstrap
 
-- Bootstrap.efi 兼容启动相，在下面 config.plist 中并未使用，可以忽略。
+- `Bootstrap.efi` 兼容启动相，在下面 `config.plist` 中并未使用，可以忽略。
 
 
 
 #### Drivers
 
-- HFSPlus.efi 必须，苹果自带 HFS 格式支持、在安装MAC或者更新时需要此驱动
-- OpenRuntime.efi 必须，内存寻址补丁。
-- Ps2KeyboardDxe.efi 可选，PS2 接口键盘驱动
-- Ps2MouseDxe.efi 可选，PS2 接口鼠标驱动
-- UsbMouseDxe.efi 可选，USB 接口鼠标驱动
+- `HFSPlus.efi` 必须，苹果自带 HFS 格式支持、在安装MAC或者更新时需要此驱动
+- `OpenRuntime.efi` 必须，内存寻址补丁。
+- `Ps2KeyboardDxe.efi` 可选，PS2 接口键盘驱动
+- `Ps2MouseDxe.efi` 可选，PS2 接口鼠标驱动
+- `UsbMouseDxe.efi` 可选，USB 接口鼠标驱动
 
 
 
