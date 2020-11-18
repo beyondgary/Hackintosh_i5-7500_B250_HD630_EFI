@@ -255,11 +255,11 @@ Windows 注册表：关闭 UTC
 
   - PlatformInfo
     - Generic
-      MLB : C027251084NJ0PGA8 (Board Serial)
-      SystemProductName : iMac18,3 (Type)
-      SystemSerialNumber : C02TW0A1J1GJ (Serial)
-      SystemUUID : D0BD3E6A-E2D5-4FF5-BB26-005C96B1A976 (SmUUID)
-  
+      - MLB : C027251084NJ0PGA8 (Board Serial)
+      - SystemProductName : iMac18,3 (Type)
+      - SystemSerialNumber : C02TW0A1J1GJ (Serial)
+      - SystemUUID : D0BD3E6A-E2D5-4FF5-BB26-005C96B1A976 (SmUUID)
+
 - 最后设置下面四项
 
   - UpdateDataHub = True
