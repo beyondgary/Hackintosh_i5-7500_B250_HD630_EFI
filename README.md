@@ -27,8 +27,8 @@
 
 | 名称     | 型号版本                      |
 | -------- | ----------------------------- |
-| 主板     | Gigabyte B250M-D3H            |
-| CPU      | Intel i5 7500                 |
+| 主板 | Gigabyte B250M-D3H            |
+| CPU  | Intel i5 7500                 |
 | 核显 | Intel HD Graphics 630         |
 | 独显 | Sapphire RX570 4G D5 OC       |
 | 声卡     | ALC892                        |
@@ -206,10 +206,10 @@ Windows 注册表：关闭 UTC
 
 - PlatformInfo
   - Generic
-    MLB
-    SystemProductName
-    SystemSerialNumber
-    SystemUUID
+  - MLB
+  - SystemProductName
+  - SystemSerialNumber
+  - SystemUUID
 
 这里将使用 `GenSMBIOS` 工具，因为它可以在 `Windows` 和 `macOS` 下工作，该工具的仓库地址：https://github.com/corpnewt/GenSMBIOS
 
