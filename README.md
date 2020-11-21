@@ -306,4 +306,12 @@ sudo trimforce enable
 ```
 ![开启 TRIM](./Screenshot/TRIM.png)
 
+关闭 TRIM
+
+```bash
+sudo trimforce disable
+```
+
+
+
 [返回顶部](#Hackintosh_i5-7500_B250_RX570_EFI)
