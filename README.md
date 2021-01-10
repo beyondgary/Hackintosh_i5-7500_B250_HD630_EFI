@@ -180,7 +180,7 @@ Windows 注册表：关闭 UTC
 
 该工具使用 `Python` 编写，所以还需要安装 `Python` 环境，在 mac 下是系统默认有安装的，windows 下可能需要自己下载安装 https://www.python.org
 
-下载 `GenSMBIOS` 工具后 `macOS1` 运行 `GenSMBIOS.command` 脚本，Windows 下运行 `GenSMBIOS.bat` 
+下载 `GenSMBIOS` 工具后 `macOS` 运行 `GenSMBIOS.command` 脚本，Windows 下运行 `GenSMBIOS.bat` 
 
 - `GenSMBIOS` 菜单选择 `3. Generate SMBIOS`  
   ```bash
