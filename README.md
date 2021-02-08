@@ -1,7 +1,7 @@
 # Hackintosh_i5-7500_B250_RX570_EFI
 针对能正常使用于 `macOS Big Sur 11.01`，也可用于 `macOS Catalina 10.15.7`。对核心显卡，独立显卡，网卡，声卡，以及 USB 做了相应的驱动设置。在介绍中的已知问题，如有解决的朋友请留言告知，多谢。
 
-> 以往的 Clover 引导保留在 `Clover_EFI` 文件夹中。适用没有使用独立显卡的配置，但只能停留在 `macOS Catalina 10.15.7` ,因为我无法在 `macOS Big Sur` 中正确驱动核显 HD630。
+> 以往的 Clover 引导保留在 `Clover_EFI` 文件夹中，适用没有使用独立显卡的配置，但只能停留在 `macOS Catalina 10.15.7` ,因为我无法在 `macOS Big Sur` 中正确驱动核显 HD630。
 
 ![系统信息](./Screenshot/System.png)
 ![音频](./Screenshot/ALC892.png)
@@ -119,7 +119,7 @@
 补丁文件，如果硬件配置并不一样，很可能需要修改以下文件：
 - `SSDT-EC.aml` 必须，因为当前 DSDT 中为 H_EC 。
 - `SSDT-PLUG.aml` 必须，注入 X86，实现 CPU 电源管理。
-- `SSDT-SMBS.aml` 可选，注入 SBUS 设备，USB 电源相关。
+- `SSDT-SBUS.aml` 可选，注入 SBUS 设备，USB 电源相关。
 #### Bootstrap
 - `Bootstrap.efi` 兼容启动相关，在下面 `config.plist` 中并未使用，可以忽略。
 #### Drivers
